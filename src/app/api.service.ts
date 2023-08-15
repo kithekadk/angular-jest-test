@@ -16,5 +16,4 @@ export class ApiService {
   LoginService(details: credentials){
     return this.http.post('http://localhost:4500/employee/login', details)
   }
-
 }

@@ -73,11 +73,60 @@
           "options": {
             "browserTarget": "angular-testing:build"
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-testing:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-testing:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "ct": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-testing:serve",
+            "watch": true,
+            "headless": false,
+            "testingType": "component"
+          },
+          "configurations": {
+            "development": {
+              "devServerTarget": "angular-testing:serve:development"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-testing:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-testing:serve:production"
+            }
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "2f38dadf-80ac-4836-95c9-5c4534b154d3"
+    "analytics": "2f38dadf-80ac-4836-95c9-5c4534b154d3",
+    "schematicCollections": [
+      "@cypress/schematic",
+      "@schematics/angular"
+    ]
   }
 }

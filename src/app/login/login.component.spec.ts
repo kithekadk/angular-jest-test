@@ -52,7 +52,7 @@ describe('LoginComponent', () => {
 
     expect(component.alertMsg).toEqual(response.message)
 
-    jest.advanceTimersByTime(3000);
+    jest.advanceTimersByTime(3000); 
 
     await new Promise(resolve => setTimeout(resolve, 3000))
 

@@ -30,3 +30,8 @@
 .alert{
     color:rgb(19, 216, 19)
 }
+
+.error{
+    color: red;
+    font-size: 14px;
+}
