@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-title='The home component'
+title = 'The home component'
 
 }

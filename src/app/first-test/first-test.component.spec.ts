@@ -78,4 +78,42 @@ describe("First Test", ()=>{
     // expect(value).toBe(2.9)
   })
 
+  /**
+   * 
+   * For strings
+   */
+
+  it('checks if values match', ()=>{
+    let cohort = 'cohort17'
+
+    expect(cohort).toMatch(/17/)
+    expect(cohort).not.toMatch(/16/)
+  })
+
+  /**
+   * Arrays and Iterables
+   */
+
+  it('passes id car brand has an audi', ()=>{
+    let carBrands = [
+      'bmw', 
+      'mercedes',
+      'audi',
+      'vw'
+    ]
+
+    expect(carBrands).toContain('audi')
+    expect(new Set(carBrands)).toContain('audi')
+  })
+
+  /**
+   * Expections and Errors
+   */
+
+  it('throws an error as defined in the sleep() function', ()=>{
+    expect(()=>component.sleep()).toThrow();
+    expect(()=>component.sleep()).toThrow(Error)
+    expect(()=>component.sleep()).toThrow(/You are still poor/)
+  })
+
 })
